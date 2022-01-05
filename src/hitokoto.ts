@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Context, template } from "koishi-core";
+import { Context, Schema, template } from "koishi";
 
 import hitokotoTemplates from "./template";
 
@@ -27,6 +27,15 @@ export interface HitokotoOptions {
   template?: { [key: string]: string };
 }
 
+const HitokotoOptions = Schema.object({
+  apiUrl: Schema.string().default("https://v1.hitokoto.cn"),
+  timeout: Schema.number().default(3000),
+  minLength: Schema.number().default(),
+  maxLength: Schema.number().default(),
+  defaultTypes: Schema.array(Schema.string()),
+  template: Schema.dict(Schema.string()),
+});
+
 export interface HitokotoRet {
   id: number;
   hitokoto:	string;
@@ -44,7 +53,7 @@ export interface HitokotoRet {
 
 export const name = "hitokoto";
 
-export async function apply(ctx: Context, _config?: HitokotoOptions): Promise<void> {
+export async function apply(ctx: Context, _config: HitokotoOptions = {}): Promise<void> {
   const config = {
     apiUrl: "https://v1.hitokoto.cn/",
     timeout: 3000,
@@ -65,7 +74,7 @@ export async function apply(ctx: Context, _config?: HitokotoOptions): Promise<vo
     )
     .option("min-length", `-l <length:int> ${template("hitokoto.option.min_length")}`)
     .option("max-length", `-L <length:int> ${template("hitokoto.option.max_length")}`)
-    .check(async ({ options }) => {
+    .before(async ({ options }) => {
       if (typeof options?.type !== "undefined") {
         if (!options.type) {
           return template("hitokoto.option.invalid_type");
