@@ -30,8 +30,8 @@ export interface HitokotoOptions {
 const HitokotoOptions = Schema.object({
   apiUrl: Schema.string().default("https://v1.hitokoto.cn"),
   timeout: Schema.number().default(3000),
-  minLength: Schema.number().default(),
-  maxLength: Schema.number().default(),
+  minLength: Schema.number(),
+  maxLength: Schema.number(),
   defaultTypes: Schema.array(Schema.string()),
   template: Schema.dict(Schema.string()),
 });
