@@ -24,16 +24,16 @@ export interface HitokotoOptions {
    * Available templates can be found on:
    * https://github.com/AwesomeHamster/koishi-plugin-hitokoto/blob/master/src/template.ts
    */
-  template?: { [key: string]: string };
+  template?: template.Node;
 }
 
-const HitokotoOptions = Schema.object({
-  apiUrl: Schema.string().default("https://v1.hitokoto.cn"),
-  timeout: Schema.number().default(3000),
-  minLength: Schema.number(),
-  maxLength: Schema.number(),
-  defaultTypes: Schema.array(Schema.string()),
-  template: Schema.dict(Schema.string()),
+export const Config = Schema.object({
+  apiUrl: Schema.string().description("获取一言的API地址").default("https://v1.hitokoto.cn"),
+  timeout: Schema.number().description("请求API时的超时时间").default(3000),
+  minLength: Schema.number().description("一言的最小长度"),
+  maxLength: Schema.number().description("一言的最大长度"),
+  defaultTypes: Schema.array(Schema.string()).description("默认一言类别"),
+  template: Schema.dict(Schema.string()).description("回复文本模板"),
 });
 
 export interface HitokotoRet {
