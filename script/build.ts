@@ -3,7 +3,6 @@ import { resolve } from "path";
 
 import esbuild, { Plugin } from "esbuild";
 import * as yaml from "js-yaml";
-import { transpile } from "typescript";
 
 const yamlPlugin = (options: yaml.LoadOptions = {}): Plugin => ({
   name: 'yaml',
@@ -34,5 +33,6 @@ esbuild.build({
   entryPoints: ["src/index.ts"],
   outfile: "dist/index.bundle.js",
   external: ["koishi"],
+  minify: true,
   plugins: [yamlPlugin()],
 });
