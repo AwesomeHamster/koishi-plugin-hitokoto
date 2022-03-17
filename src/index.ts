@@ -64,22 +64,22 @@ export async function apply(ctx: Context, _config: HitokotoOptions = {}): Promis
     .before(async ({ options, session }) => {
       if (typeof options?.type !== "undefined") {
         if (!options.type) {
-          return session?.text("hitokoto.option.invalid_type");
+          return session?.text(".error.invalid_type");
         }
         const types = options.type.split(",");
         if (types.length <= 0) {
-          return session?.text("hitokoto.option.invalid_type");
+          return session?.text(".error.invalid_type");
         } else {
           for (const type of types) {
             if (!type) {
-              return session?.text("hitokoto.option.invalid_type");
+              return session?.text(".error.invalid_type");
             }
           }
         }
       }
       if (options?.["min-length"] && options?.["max-length"]) {
         if (options["min-length"] > options["max-length"]) {
-          return session?.text("hitokoto.option.min_length_gt_max_length");
+          return session?.text(".error.min_length_gt_max_length");
         }
       }
     })
@@ -100,7 +100,7 @@ export async function apply(ctx: Context, _config: HitokotoOptions = {}): Promis
           timeout: config.timeout,
           params,
         });
-        return session?.text("hitokoto.format", {
+        return session?.text(".format", {
           ...resp,
           // the `from_who` field may be null.
           from_who: resp.from_who ?? "",
@@ -108,9 +108,9 @@ export async function apply(ctx: Context, _config: HitokotoOptions = {}): Promis
       } catch (error) {
         const err = error as Error;
         if (/ETIMEOUT/.test(err.message)) {
-          return session?.text("hitokoto.timeout");
+          return session?.text(".error.timeout");
         }
-        return session?.text("hitokoto.unknown_error", err);
+        return session?.text(".error.unknown_error", err);
       }
     });
 }
