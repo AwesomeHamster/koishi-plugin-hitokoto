@@ -1,7 +1,5 @@
-import axios from "axios";
 import { Context, Schema, template } from "koishi";
 
-import hitokotoTemplates from "./template";
 import * as i18n from "./i18n";
 
 export interface HitokotoOptions {
@@ -98,18 +96,14 @@ export async function apply(ctx: Context, _config: HitokotoOptions = {}): Promis
       }
 
       try {
-        const resp = await axios.get<HitokotoRet>(config.apiUrl, {
+        const resp = await ctx.http.get<HitokotoRet>(config.apiUrl, {
           timeout: config.timeout,
           params,
         });
-        if (resp.status !== 200) {
-          return template("hitokoto.service_unavailable");
-        }
-        const { data } = resp;
         return template("hitokoto.format", {
-          ...data,
+          ...resp,
           // the `from_who` field may be null.
-          from_who: data.from_who ?? "",
+          from_who: resp.from_who ?? "",
         });
       } catch (error) {
         const err = error as Error;
