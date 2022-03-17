@@ -2,7 +2,7 @@ import axios from "axios";
 import { Context, Schema, template } from "koishi";
 
 import hitokotoTemplates from "./template";
-import * as i18n from "../i18n";
+import * as i18n from "./i18n";
 
 export interface HitokotoOptions {
   /**
