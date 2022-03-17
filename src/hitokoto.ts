@@ -2,6 +2,7 @@ import axios from "axios";
 import { Context, Schema, template } from "koishi";
 
 import hitokotoTemplates from "./template";
+import * as i18n from "../i18n";
 
 export interface HitokotoOptions {
   /**
@@ -53,7 +54,8 @@ export async function apply(ctx: Context, _config: HitokotoOptions = {}): Promis
     ..._config,
   };
 
-  template.set("hitokoto", hitokotoTemplates);
+  ctx.i18n.define("en", i18n.en);
+  ctx.i18n.define("zh", i18n.zh);
 
   ctx
     .command("hitokoto", template("hitokoto.description"))
