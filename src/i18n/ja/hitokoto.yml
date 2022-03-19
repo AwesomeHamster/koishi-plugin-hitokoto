@@ -1,8 +1,17 @@
+---
 commands:
   hitokoto:
     description: ランダムHitokoto(一言)
-
+    options:
+      type: "指定された種類のヒトコトのみをお返しします。種類間の組み合わせは可能。指定可能な種類は下記のリンクに参考してください。\n<link>"
+      min-length: ヒトコトの文字数は下限がある
+      max-length: ヒトコトの文字数は上限がある
     messages:
-      # more placeholders can be found on:
-      # https://developer.hitokoto.cn/sentence/#%E8%BF%94%E5%9B%9E%E6%A0%BC%E5%BC%8F
-      format: "「{hitokoto}」\n\t\t\t\t——{from_who}《{from}》"
+      invalid_type: 不適切な種類
+      min_length_gt_max_length: min-lengthはmax-length以下に設定しなければなりません。
+      service_unavailable: サービスは現在利用できません
+      unknown_error: "不明なエラーが発生しました。しばらくしてからもう一度お試しください。{message}"
+      timeout: リクエストがタイムアウトしました。しばらくしてからもう一度お試しください
+      #more placeholders can be found on:
+      #https://developer.hitokoto.cn/sentence/#%E8%BF%94%E5%9B%9E%E6%A0%BC%E5%BC%8F
+      format: "「{hitokoto}」\n\\t\\t\\t\\t——{from_who}《{from}》"
