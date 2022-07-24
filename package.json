@@ -72,7 +72,7 @@
     "@hamster-bot/eslint-config": "^1.0.0",
     "@hamster-bot/prettier-config": "^1.0.0",
     "@koishijs/plugin-database-memory": "^1.0.0",
-    "@koishijs/plugin-mock": "^1.0.0",
+    "@koishijs/plugin-mock": "^2.0.0",
     "@types/chai": "^4.3.1",
     "@types/fs-extra": "^9.0.13",
     "@types/js-yaml": "^4.0.5",
