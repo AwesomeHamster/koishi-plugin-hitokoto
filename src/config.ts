@@ -16,7 +16,7 @@ export interface Config {
   defaultTypes?: string[]
 }
 
-export const Config = Schema.object({
+export const Config: Schema<Config> = Schema.object({
   apiUrl: Schema.string()
     .description('获取一言的 API 地址')
     .default('https://v1.hitokoto.cn'),
