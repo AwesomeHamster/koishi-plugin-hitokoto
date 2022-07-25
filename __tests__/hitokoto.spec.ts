@@ -23,7 +23,7 @@ describe('basic', () => {
   })
 
   it('should provide service', async () => {
-    const hitokoto = await client.mock.ctx.hitokoto.getHitokoto({})
+    const hitokoto = await client.app.hitokoto.getHitokoto({})
     expect(hitokoto).to.have.a.property('hitokoto')
   })
 })
