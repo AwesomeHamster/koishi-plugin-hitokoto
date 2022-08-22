@@ -1,8 +1,8 @@
 import { Context } from 'koishi'
 
-import i18n from './i18n'
 import { HitokotoApi } from './api'
 import { Config } from './config'
+import i18n from './i18n'
 
 export const name = 'hitokoto'
 export { Config, HitokotoApi }
@@ -15,7 +15,7 @@ export async function apply(ctx: Context, _config: Config = {}): Promise<void> {
 
   Object.entries(i18n).forEach(([key, value]) => ctx.i18n.define(key, value))
 
-  ctx.plugin(HitokotoApi)
+  ctx.plugin(HitokotoApi, config)
 
   ctx
     .command('hitokoto')
