@@ -1,11 +1,10 @@
 import { Context, Service } from 'koishi'
+
 import { Config } from '.'
 
 declare module 'koishi' {
-  namespace Context {
-    interface Services {
-      hitokoto: HitokotoApi
-    }
+  interface Context {
+    hitokoto: HitokotoApi
   }
 }
 

@@ -1,7 +1,7 @@
+import memory from '@koishijs/plugin-database-memory'
+import mock from '@koishijs/plugin-mock'
 import { expect } from 'chai'
 import { App } from 'koishi'
-import mock from '@koishijs/plugin-mock'
-import memory from '@koishijs/plugin-database-memory'
 
 import * as hitokoto from '../src'
 
@@ -23,7 +23,7 @@ describe('basic', () => {
   })
 
   it('should provide service', async () => {
-    const hitokoto = await client.mock.ctx.hitokoto.getHitokoto({})
+    const hitokoto = await client.app.hitokoto.getHitokoto({})
     expect(hitokoto).to.have.a.property('hitokoto')
   })
 })
