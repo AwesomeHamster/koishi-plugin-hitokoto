@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.5] - 2022-09-06
+
+### Added
+
+- support koishi v4.8 ([#9](https://github.com/AwesomeHamster/koishi-plugin-hitokoto/pull/9))
+- update i18n translations ([`ffa4888`](https://github.com/AwesomeHamster/koishi-plugin-hitokoto/commit/ffa4888daaa51f9948d9faa7f6a68a6e4e125ff3))
+
 ## [2.1.4] - 2022-06-14
 
 ### Fixed
@@ -91,7 +98,8 @@ This patch released with no changes.
 
 - `hitokoto` command
 
-[unreleased]: https://github.com/AwesomeHamster/koishi-plugin-hitokoto/compare/v2.1.4...HEAD
+[unreleased]: https://github.com/AwesomeHamster/koishi-plugin-hitokoto/compare/v2.1.5...HEAD
+[2.1.5]: https://github.com/AwesomeHamster/koishi-plugin-hitokoto/compare/v2.1.4...v2.1.5
 [2.1.4]: https://github.com/AwesomeHamster/koishi-plugin-hitokoto/compare/v2.1.3...v2.1.4
 [2.1.3]: https://github.com/AwesomeHamster/koishi-plugin-hitokoto/compare/v2.1.2...v2.1.3
 [2.1.2]: https://github.com/AwesomeHamster/koishi-plugin-hitokoto/compare/v2.1.1...v2.1.2
