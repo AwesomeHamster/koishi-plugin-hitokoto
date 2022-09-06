@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+## [2.1.4] - 2022-06-14
+
+### Fixed
+
+- fix author filed in package.json ([`b0f6b7f`](https://github.com/AwesomeHamster/koishi-plugin-hitokoto/commit/b0f6b7f5a92fa0bfd6029468d95db822d3cf8477))
+
+## [2.1.3] - 2022-06-12
+
+### Added
+
+- add koishi field in package.json for koishi console / market ([`a619457`](https://github.com/AwesomeHamster/koishi-plugin-hitokoto/commit/a619457d0da84dc41dc72728f7581f8d904ce44f))
+
 ## [2.1.2] - 2022-05-12
 
 ### Added
@@ -76,3 +90,15 @@ This patch released with no changes.
 ### Added
 
 - `hitokoto` command
+
+[unreleased]: https://github.com/AwesomeHamster/koishi-plugin-hitokoto/compare/v2.1.4...HEAD
+[2.1.4]: https://github.com/AwesomeHamster/koishi-plugin-hitokoto/compare/v2.1.3...v2.1.4
+[2.1.3]: https://github.com/AwesomeHamster/koishi-plugin-hitokoto/compare/v2.1.2...v2.1.3
+[2.1.2]: https://github.com/AwesomeHamster/koishi-plugin-hitokoto/compare/v2.1.1...v2.1.2
+[2.1.1]: https://github.com/AwesomeHamster/koishi-plugin-hitokoto/compare/v2.1.0...v2.1.1
+[2.1.0]: https://github.com/AwesomeHamster/koishi-plugin-hitokoto/compare/v2.0.1...v2.1.0
+[2.0.1]: https://github.com/AwesomeHamster/koishi-plugin-hitokoto/compare/v2.0.0...v2.0.1
+[2.0.0]: https://github.com/AwesomeHamster/koishi-plugin-hitokoto/compare/v1.0.3...v2.0.0
+[1.0.3]: https://github.com/AwesomeHamster/koishi-plugin-hitokoto/compare/v1.0.2...v1.0.3
+[1.0.2]: https://github.com/AwesomeHamster/koishi-plugin-hitokoto/compare/v1.0.1...v1.0.2
+[1.0.1]: https://github.com/AwesomeHamster/koishi-plugin-hitokoto/compare/24cb3c341e3b1537aafa295019fddc90bc6cff9a...v1.0.1
