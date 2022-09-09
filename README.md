@@ -38,7 +38,7 @@ plugins:
     maxLength: 30
 ```
 
-## Configuration 配置
+## Configuration
 
 You can configure this plugin using the following configurations.
 
