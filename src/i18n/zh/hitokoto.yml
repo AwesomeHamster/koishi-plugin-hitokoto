@@ -18,6 +18,7 @@ commands:
       invalid_type: 指定的一言类型 {0} 不存在，请输入 hitokoto.types 查看所有可用类型。
       min_length_gt_max_length: 最小长度不能大于最大长度。
       service_unavailable: 当前服务不可用，请稍候再试。
+      request_error: "请求出错，请稍候再试。\n{0}"
       unknown_error: "出现未知错误，请稍候再试。\n{message}"
       timeout: 请求超时，请稍候再试。
       # the format that the bot would generate, {hitokoto} is the sentence that hitokoto API returns,
