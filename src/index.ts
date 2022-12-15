@@ -1,18 +1,14 @@
-import { Context } from 'koishi'
+import { Context, Quester } from 'koishi'
 
 import { HitokotoApi } from './api'
 import { Config } from './config'
 import i18n from './i18n'
 
 export const name = 'hitokoto'
+
 export { Config, HitokotoApi }
 
-export async function apply(ctx: Context, _config: Config = {}): Promise<void> {
-  const config = {
-    apiUrl: 'https://v1.hitokoto.cn/',
-    ..._config,
-  }
-
+export async function apply(ctx: Context, config: Config = {}): Promise<void> {
   Object.entries(i18n).forEach(([key, value]) => ctx.i18n.define(key, value))
 
   ctx.plugin(HitokotoApi, config)
@@ -51,6 +47,9 @@ export async function apply(ctx: Context, _config: Config = {}): Promise<void> {
         const err = error as Error
         if (/ETIMEOUT/.test(err.message)) {
           return session?.text('.timeout')
+        }
+        if (Quester.isAxiosError(error)) {
+          return session?.text('.request_error', [error.status])
         }
         return session?.text('.unknown_error', err)
       }
