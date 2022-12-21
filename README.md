@@ -1,4 +1,12 @@
-# koishi-plugin-hitokoto
+<h1 align="center">koishi-plugin-hitokoto</h1>
+
+<p align="center">
+  <img src="./logo.png" width="600px"></img>
+</p>
+
+<p align="center">「用代码表达言语的魅力，用代码书写山河的壮丽。」</p>
+<p align="center"><sup><i>Programming for the charm of words, coding to draw the magnificent scenery.</i></sup></p>
+<p align="center"><sup>by Hitokoto Developers</sup></p>
 
 English | [简体中文](./README.zh-CN.md)
 
