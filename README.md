@@ -14,7 +14,7 @@ A [koishi](https://github.com/koishijs/koishi) plugin to get a random "Hitokoto"
 
 ## How to Install
 
-Plugins in koishi can be installed either by Plugin Market or Package Managers.
+You could install plugins in Koishi with Plugin Market or Package Managers.
 
 ### Plugin Market
 
