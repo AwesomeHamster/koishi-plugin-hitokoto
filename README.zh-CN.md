@@ -1,5 +1,14 @@
 # koishi-plugin-hitokoto
 
+<p align="center">
+
+  ![Koishi](./logo.png)
+
+</p>
+
+<p align="center">「用代码表达言语的魅力，用代码书写山河的壮丽。」</p>
+<p align="center"><sup>——一言开发者</sup></p>
+
 [English](./README.md) | 简体中文
 
 这是 [koishi](https://github.com/koishijs/koishi) 框架的一言插件，调用指令后会回复随机的一句话。该服务由 [一言网](https://hitokoto.cn) 提供。
