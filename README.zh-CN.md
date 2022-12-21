@@ -1,9 +1,7 @@
 # koishi-plugin-hitokoto
 
 <p align="center">
-
-  ![Koishi](./logo.png)
-
+  <img src="./logo.png" width="600px"></img>
 </p>
 
 <p align="center">「用代码表达言语的魅力，用代码书写山河的壮丽。」</p>
