@@ -1,4 +1,4 @@
-# koishi-plugin-hitokoto
+<h1 align="center">koishi-plugin-hitokoto</h1>
 
 <p align="center">
   <img src="./logo.png" width="600px"></img>
