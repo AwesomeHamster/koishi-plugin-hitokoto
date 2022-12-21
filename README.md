@@ -1,20 +1,12 @@
-<h1 align="center">koishi-plugin-hitokoto</h1>
+# koishi-plugin-hitokoto
 
-<p align="center">
-  <img src="./logo.png" width="600px"></img>
-</p>
-
-<p align="center">「用代码表达言语的魅力，用代码书写山河的壮丽。」</p>
-<p align="center"><sup><i>Programming for the charm of words, coding to draw the magnificent scenery.</i></sup></p>
-<p align="center"><sup>by Hitokoto Developers</sup></p>
-
-🌏 English | [简体中文](./README.zh-CN.md)
+English | [简体中文](./README.zh-CN.md)
 
 A [koishi](https://github.com/koishijs/koishi) plugin to get a random "Hitokoto" Chinese sentence, which is from [一言网](https://hitokoto.cn).
 
 ## How to Install
 
-You could install plugins in Koishi with Plugin Market or Package Managers.
+Plugins in koishi can be installed either by Plugin Market or Package Managers.
 
 ### Plugin Market
 
@@ -57,21 +49,11 @@ You can configure this plugin using the following configurations.
 |  `maxLength`   |    `number`     |    no    |             30             |                                      The maximum length of the sentence, can be override via options.                                       |
 | `defaultTypes` | `Array<string>` |    no    |         all types          | The default types of the sentence, can be override via options. If an empty array was passed in, then the plugin would treat it as `['a']`. |
 
-## Internationalisation
+## Translation
 
 This plugin supports multiple languages.
 
-### Languages
-
-- Simplified Chinese - [@MaikoTan](https://github.com/MaikoTan)
-- English - [@MaikoTan](https://github.com/MaikoTan)
-- Japanese - [@MaikoTan](https://github.com/MaikoTan)
-
-### Contribute Translations
-
-We are using [Crowdin](https://crowdin.com/) to localise our project.
-
-If you are willing to contribute your language, please register a [Crowdin](https://crowdin.com/) account before contributing translations to the `hitokoto` folder of the Crowdin project [hatsushimo](https://crowdin.com/project/hatsushimo).
+To contribute translations, please register a [Crowdin](https://crowdin.com/) account before contributing translations to the `hitokoto` folder of the Crowdin project [hatsushimo](https://crowdin.com/project/hatsushimo).
 
 ## ChangeLog
 
