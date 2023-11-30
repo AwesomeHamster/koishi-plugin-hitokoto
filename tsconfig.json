@@ -1,5 +1,5 @@
 {
-  "extends": "@hamster-bot/constructeur/tsconfig.base.json",
+  "extends": "@hamster-bot/tsconfig/tsconfig.json",
   "compilerOptions": {
     "outDir": "dist",
     "types": ["node", "mocha"]

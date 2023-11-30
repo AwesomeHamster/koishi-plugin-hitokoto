@@ -68,9 +68,9 @@
     "koishi": "^4.11.0"
   },
   "devDependencies": {
-    "@hamster-bot/constructeur": "*",
     "@hamster-bot/eslint-config": "*",
     "@hamster-bot/prettier-config": "*",
+    "@hamster-bot/tsconfig": "*",
     "@koishijs/plugin-database-memory": "^2.5.0",
     "@koishijs/plugin-mock": "^2.6.5",
     "@types/chai": "^4.3.11",
