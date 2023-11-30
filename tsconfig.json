@@ -1,8 +1,10 @@
 {
   "extends": "@hamster-bot/tsconfig/tsconfig.json",
   "compilerOptions": {
-    "outDir": "dist",
-    "types": ["node", "mocha"]
+    "module": "CommonJS",
+    "outDir": "lib",
+    "types": ["node", "mocha"],
+    "skipLibCheck": true
   },
   "include": ["src/**/*.ts"]
 }

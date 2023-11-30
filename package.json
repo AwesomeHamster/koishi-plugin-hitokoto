@@ -18,23 +18,23 @@
   },
   "homepage": "https://github.com/AwesomeHamster/koishi-plugin-hitokoto",
   "license": "MIT",
-  "main": "dist/index.bundle.js",
+  "main": "lib/index.js",
   "directories": {
     "src": "src",
     "test": "__tests__"
   },
   "files": [
-    "dist",
+    "lib",
     "README.md",
     "LICENSE"
   ],
-  "types": "dist/index.d.ts",
+  "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AwesomeHamster/koishi-plugin-hitokoto.git"
   },
   "scripts": {
-    "build": "constructeur build && tsc --emitDeclarationOnly",
+    "build": "tsc",
     "dev": "constructeur build --minify false && tsc --emitDeclarationOnly",
     "clean": "rimraf dist/*",
     "test": "mocha -r ts-node/register -r yml-register --extension .spec.ts ./__tests__",
