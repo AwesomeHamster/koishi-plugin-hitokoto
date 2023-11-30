@@ -70,7 +70,7 @@
   "devDependencies": {
     "@hamster-bot/eslint-config": "*",
     "@hamster-bot/prettier-config": "*",
-    "@hamster-bot/tsconfig": "*",
+    "@hamster-bot/tsconfig": "^0.0.2",
     "@koishijs/plugin-database-memory": "^2.5.0",
     "@koishijs/plugin-mock": "^2.6.5",
     "@types/chai": "^4.3.11",
