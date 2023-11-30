@@ -14,36 +14,14 @@ A [koishi](https://github.com/koishijs/koishi) plugin to get a random "Hitokoto"
 
 ## How to Install
 
-You could install plugins in Koishi with Plugin Market or Package Managers.
+You could install plugins in Koishi with [Koishi Plugin Market](https://koishi.chat/en-US/manual/usage/market.html) by searching the name `hitokoto`.
 
-### Plugin Market
-
-In your Koishi Console, open Plugin Market before searching for the name `hitokoto`, then click Install button and navigate to the plugin configuration page, then launch the plugin by clicking Launch button.
-
-### Manually
-
-If you want to install this plugin manually, make sure you have `npm` or `yarn` installed, then run the command below:
+Or you could install this plugin manually with `yarn` or `npm` as well:
 
 ```bash
-# If you have npm installed
-$ npm install --save koishi-plugin-hitokoto
-# If you have yarn installed
 $ yarn add koishi-plugin-hitokoto
-```
-
-When the plugin is installed by your package manager, you should also add the plugin name into your koishi configuration file.
-
-Assuming you have a configuration file that is YAML format, you should add an entry like this:
-
-```yaml
----
-# ...
-plugins:
-  hitokoto:
-    # Add configurations as you need
-    apiUrl: https://api.hitokoto.cn/
-    minLength: 0
-    maxLength: 30
+# Or with `npm`
+$ npm install --save koishi-plugin-hitokoto
 ```
 
 ## Configuration
@@ -59,23 +37,13 @@ You can configure this plugin using the following configurations.
 
 ## Internationalisation
 
-This plugin supports multiple languages.
-
-### Languages
-
-- Simplified Chinese - [@MaikoTan](https://github.com/MaikoTan)
-- English - [@MaikoTan](https://github.com/MaikoTan)
-- Japanese - [@MaikoTan](https://github.com/MaikoTan)
-
-### Contribute Translations
-
-We are using [Crowdin](https://crowdin.com/) to localise our project.
+This plugin supports multiple languages and we are using [Crowdin](https://crowdin.com/) to localise our project.
 
 If you are willing to contribute your language, please register a [Crowdin](https://crowdin.com/) account before contributing translations to the `hitokoto` folder of the Crowdin project [hatsushimo](https://crowdin.com/project/hatsushimo).
 
-## ChangeLog
+## Changelog
 
-The change log of this plugin can be found [here](./CHANGELOG.md).
+The changelog of this plugin can be found [here](./CHANGELOG.md).
 
 ## License
 
