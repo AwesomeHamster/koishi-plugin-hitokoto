@@ -1,5 +1,5 @@
 {
-  "extends": "@hamster-bot/tsconfig/tsconfig.json",
+  "extends": "@hamster-bot/tsconfig",
   "compilerOptions": {
     "module": "CommonJS",
     "outDir": "lib",
