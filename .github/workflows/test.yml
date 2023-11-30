@@ -4,10 +4,16 @@ on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        koishi: ['4.11', '4.12', '4.13', '4.14', '4.15']
+
     steps:
       - uses: actions/checkout@v3
       - uses: AwesomeHamster/actions-test@master
         with:
+          install-peer: koishi@${{ matrix.koishi }}
           test: |
             yarn lint
             yarn test
