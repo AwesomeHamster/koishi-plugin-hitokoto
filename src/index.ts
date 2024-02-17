@@ -18,11 +18,11 @@ export async function apply(ctx: Context, config: Config = {}): Promise<void> {
       .command('hitokoto')
       .alias('一言')
       .option('type', `-t <type:string>`)
-      .option('min-length', `-l <length:int>`)
-      .option('max-length', `-L <length:int>`)
+      .option('minLength', `-l <length:int>`)
+      .option('maxLength', `-L <length:int>`)
       .before(async ({ options, session }) => {
-        if (options?.['min-length'] && options?.['max-length']) {
-          if (options['min-length'] > options['max-length']) {
+        if (options?.minLength && options?.maxLength) {
+          if (options.minLength > options.maxLength) {
             return session?.text('.min_length_gt_max_length')
           }
         }
@@ -37,8 +37,8 @@ export async function apply(ctx: Context, config: Config = {}): Promise<void> {
       .action(async ({ options, session }) => {
         const params = {
           c: options?.type?.split(',') ?? config.defaultTypes,
-          min_length: options?.['min-length'] ?? config.minLength,
-          max_length: options?.['max-length'] ?? config.maxLength,
+          min_length: options?.minLength ?? config.minLength,
+          max_length: options?.maxLength ?? config.maxLength,
         }
 
         try {
