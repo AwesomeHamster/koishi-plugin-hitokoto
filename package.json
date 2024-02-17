@@ -89,6 +89,7 @@
     "eslint-import-resolver-typescript": "^3.6.1",
     "fs-extra": "^11.2.0",
     "js-yaml": "^4.1.0",
+    "koishi": "^4.11.0",
     "mocha": "^10.2.0",
     "prettier": "^3.1.0",
     "rimraf": "^5.0.5",
