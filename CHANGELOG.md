@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.6] - 2024-02-17
+
+### Added
+
+- support `inject` in koishi v4.15.x ([#23](https://github.com/AwesomeHamster/koishi-plugin-hitokoto/pull/23))
+- support yakumo HMR feature ([#24](https://github.com/AwesomeHamster/koishi-plugin-hitokoto/pull/24))
+- more usage examples in README ([#15](https://github.com/AwesomeHamster/koishi-plugin-hitokoto/pull/15))
+
+### Fixed
+
+- fix command option to be camel case ([#27](https://github.com/AwesomeHamster/koishi-plugin-hitokoto/pull/27))
+- handle axios error ([#20](https://github.com/AwesomeHamster/koishi-plugin-hitokoto/pull/20))
+
+### Changed
+
+- remove uncompleted languages ([`e06ffaf`](https://github.com/AwesomeHamster/koishi-plugin-hitokoto/commit/e06ffaf123f452d0c382adefcc8a5128c103001a))
+
 ## [2.1.5] - 2022-09-06
 
 ### Added
