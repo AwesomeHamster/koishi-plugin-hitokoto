@@ -54,7 +54,7 @@
     "service": {
       "required": [],
       "optional": [
-        "database"
+        "sentences"
       ],
       "implements": []
     },
