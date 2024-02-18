@@ -8,6 +8,14 @@
 <p align="center"><sup><i>Programming for the charm of words, coding to draw the magnificent scenery.</i></sup></p>
 <p align="center"><sup>by Hitokoto Developers</sup></p>
 
+<hr>
+
+<p align="center">
+
+[![npm](https://img.shields.io/npm/v/koishi-plugin-hitokoto?style=flat-square)](https://www.npmjs.com/package/koishi-plugin-hitokoto)
+
+</p>
+
 🌏 English | [简体中文](./README.zh-CN.md)
 
 A [koishi](https://github.com/koishijs/koishi) plugin to get a random "Hitokoto" Chinese sentence, which is from [一言网](https://hitokoto.cn).
