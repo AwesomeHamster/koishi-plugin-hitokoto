@@ -12,7 +12,10 @@ declare module 'koishi' {
 export class HitokotoApi extends Service {
   private _apiUrl: string
 
-  constructor(ctx: Context, private config: Config) {
+  constructor(
+    ctx: Context,
+    private config: Config,
+  ) {
     super(ctx, 'hitokoto', true)
     this._apiUrl = config.apiUrl ?? 'https://v1.hitokoto.cn/'
   }
