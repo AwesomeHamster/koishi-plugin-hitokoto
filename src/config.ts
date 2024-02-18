@@ -1,6 +1,7 @@
 import { Schema } from 'koishi'
 
 export interface Config {
+  sentences?: boolean
   /**
    * @default "https://v1.hitokoto.cn"
    */
@@ -16,6 +17,7 @@ export interface Config {
 }
 
 export const Config: Schema<Config> = Schema.object({
+  sentences: Schema.boolean().description('是否使用本地一言语料库(需要安装 sentences 服务)').default(false),
   apiUrl: Schema.string().description('获取一言的 API 地址').default('https://v1.hitokoto.cn'),
   minLength: Schema.number().description('一言的最小长度'),
   maxLength: Schema.number().description('一言的最大长度'),
