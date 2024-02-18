@@ -5,6 +5,10 @@ import * as Command from './command'
 import { Config } from './config'
 import i18n from './i18n'
 
+export const inject = {
+  optional: ['sentences'],
+}
+
 export const name = 'hitokoto'
 
 export { Config, HitokotoApi }

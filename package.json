@@ -87,6 +87,7 @@
     "fs-extra": "^11.2.0",
     "js-yaml": "^4.1.0",
     "koishi": "^4.16.0",
+    "koishi-plugin-hitokoto-sentences": "^1.0.393",
     "mocha": "^10.2.0",
     "prettier": "^3.1.0",
     "tsup": "^8.0.1",
