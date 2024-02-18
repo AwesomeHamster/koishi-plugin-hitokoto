@@ -1,19 +1,12 @@
 import { Context, Service } from 'koishi'
+import type { SentencesParams } from 'koishi-plugin-hitokoto-sentences'
 
 import { Config } from '.'
-
-import type { SentencesParams } from 'koishi-plugin-hitokoto-sentences'
 
 declare module 'koishi' {
   interface Context {
     hitokoto: HitokotoApi
   }
-}
-
-export interface HitokotoParams {
-  c?: string[]
-  min_length?: number
-  max_length?: number
 }
 
 export class HitokotoApi extends Service {
@@ -24,11 +17,11 @@ export class HitokotoApi extends Service {
     this._apiUrl = config.apiUrl ?? 'https://v1.hitokoto.cn/'
   }
 
-  async getHitokoto(params: HitokotoParams): Promise<HitokotoRet> {
+  async getHitokoto(params: SentencesParams): Promise<HitokotoRet> {
     const sentences = this.ctx.get('sentences')
     let resp: HitokotoRet
     if (this.config.sentences && sentences) {
-      resp = sentences.getSentences(params as SentencesParams)
+      resp = sentences.getSentence(params)
     } else {
       resp = await this.ctx.http.get<HitokotoRet>(this._apiUrl, {
         params: this.buildSearchParams(params),
@@ -41,7 +34,7 @@ export class HitokotoApi extends Service {
     }
   }
 
-  buildSearchParams(params: HitokotoParams): URLSearchParams {
+  buildSearchParams(params: SentencesParams): URLSearchParams {
     const searchParams = new URLSearchParams()
     if (params.c) {
       params.c.forEach((type) => searchParams.append('c', type))
