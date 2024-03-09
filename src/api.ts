@@ -14,10 +14,10 @@ export class HitokotoApi extends Service {
 
   constructor(
     ctx: Context,
-    private config: Config,
+    config: Config,
   ) {
     super(ctx, 'hitokoto', true)
-    this._apiUrl = config.apiUrl ?? 'https://v1.hitokoto.cn/'
+    this._apiUrl = this.config.sentences ? '' : config.apiUrl ?? 'https://v1.hitokoto.cn/'
   }
 
   async getHitokoto(params: SentencesParams): Promise<HitokotoRet> {
