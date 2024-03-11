@@ -1,7 +1,8 @@
 import { Context, Service } from 'koishi'
-import type { SentencesParams } from 'koishi-plugin-hitokoto-sentences'
 
 import { Config } from '.'
+
+import type { SentencesParams } from 'koishi-plugin-hitokoto-sentences'
 
 declare module 'koishi' {
   interface Context {
