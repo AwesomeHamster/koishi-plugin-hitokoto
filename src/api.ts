@@ -11,13 +11,15 @@ declare module 'koishi' {
 
 export class HitokotoApi extends Service {
   private _apiUrl: string
+  config: Config
 
   constructor(
     ctx: Context,
-    private config: Config,
+    config: Config,
   ) {
     super(ctx, 'hitokoto', true)
-    this._apiUrl = config.apiUrl ?? 'https://v1.hitokoto.cn/'
+    this.config = config
+    this._apiUrl = this.config.sentences ? '' : this.config.apiUrl ?? 'https://v1.hitokoto.cn/'
   }
 
   async getHitokoto(params: SentencesParams): Promise<HitokotoRet> {
