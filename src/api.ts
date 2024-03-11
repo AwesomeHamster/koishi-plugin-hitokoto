@@ -11,7 +11,7 @@ declare module 'koishi' {
 
 export class HitokotoApi extends Service {
   private _apiUrl: string
-  declare config: Config
+  config: Config
 
   constructor(
     ctx: Context,
