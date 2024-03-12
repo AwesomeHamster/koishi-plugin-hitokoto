@@ -8,6 +8,7 @@ jobs:
   publish:
     uses: AwesomeHamster/workflows/.github/workflows/publish.yml@master
     permissions:
+      id-token: write
       contents: write
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
