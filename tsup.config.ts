@@ -1,3 +1,5 @@
+/* eslint-disable import/no-named-as-default-member */
+/* eslint-disable import/default */
 import yaml from 'esbuild-plugin-yaml'
 import { defineConfig } from 'tsup'
 
@@ -7,6 +9,6 @@ export default defineConfig({
   format: ['cjs'],
   clean: true,
   outDir: 'lib',
-  esbuildPlugins: [yaml.yamlPlugin()],
+  esbuildPlugins: [yaml.yamlPlugin({})],
   esbuildOptions(options, context) {},
 })

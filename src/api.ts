@@ -1,5 +1,5 @@
 import { Context, Service } from 'koishi'
-import type { SentencesParams } from 'koishi-plugin-hitokoto-sentences'
+import { SentencesParams } from 'koishi-plugin-hitokoto-sentences'
 
 import { Config } from '.'
 

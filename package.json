@@ -38,7 +38,7 @@
     "dev": "yarn build:tsup",
     "build:tsup": "tsup",
     "test": "mocha -r tsx -r yml-register --extension .spec.ts ./__tests__",
-    "lint": "eslint src/**/*.ts && yarn prettier --check",
+    "lint": "eslint './**/*.{js,ts,tsx}' && yarn prettier --check",
     "format": "yarn prettier --write",
     "prettier": "prettier '**/*.{js,ts,json,yml,yaml,md}' '!dist/**/*'"
   },
