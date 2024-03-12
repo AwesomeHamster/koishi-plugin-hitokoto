@@ -1,5 +1,5 @@
 import { Context, Service } from 'koishi'
-import type { SentencesParams } from 'koishi-plugin-hitokoto-sentences'
+import { SentencesParams } from 'koishi-plugin-hitokoto-sentences'
 
 import { Config } from '.'
 
@@ -13,10 +13,7 @@ export class HitokotoApi extends Service {
   private _apiUrl: string
   config: Config
 
-  constructor(
-    ctx: Context,
-    config: Config,
-  ) {
+  constructor(ctx: Context, config: Config) {
     super(ctx, 'hitokoto', true)
     this.config = config
     this._apiUrl = this.config.sentences ? '' : this.config.apiUrl ?? 'https://v1.hitokoto.cn/'
