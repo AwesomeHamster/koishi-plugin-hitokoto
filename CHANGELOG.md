@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.7] - 2024-03-12
+
+### Added
+
+- publish a new plugin [`hitokoto-sentences`](https://www.npmjs.com/package/koishi-plugin-hitokoto-sentences) which ships a local copy for Hitokoto sentences bundle
+- support to get sentence from local `hitokoto-sentences` plugin ([#25](https://github.com/AwesomeHamster/koishi-plugin-hitokoto/pull/25)) by [@SaarChaffee](https://github.com/SaarChaffee)
+- hide api url settings when using sentences plugin ([#32](https://github.com/AwesomeHamster/koishi-plugin-hitokoto/pull/32))
+
+### Changed
+
+- split command as sub plugin for Koishi v4.17.0 ([#30](https://github.com/AwesomeHamster/koishi-plugin-hitokoto/pull/30))
+
 ## [2.1.6] - 2024-02-17
 
 ### Added
