@@ -13,10 +13,7 @@ export class HitokotoApi extends Service {
   private _apiUrl: string
   config: Config
 
-  constructor(
-    ctx: Context,
-    config: Config,
-  ) {
+  constructor(ctx: Context, config: Config) {
     super(ctx, 'hitokoto', true)
     this.config = config
     this._apiUrl = this.config.sentences ? '' : this.config.apiUrl ?? 'https://v1.hitokoto.cn/'
